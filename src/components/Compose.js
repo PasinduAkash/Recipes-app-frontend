@@ -22,15 +22,13 @@ export default function Compose(props) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(details);
 
-    axios
+    await axios
       .post("/api/compose", details)
       .then((res) => {
-        console.log("sending data");
-        console.log(res);
+        return res;
       })
       .catch((err) => {
         console.log(err);

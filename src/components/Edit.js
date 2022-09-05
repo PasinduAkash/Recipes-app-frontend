@@ -32,12 +32,17 @@ export default function Edit(props) {
     }));
   };
 
-  const handleEditSubmit = (e) => {
+  const handleEditSubmit = async (e) => {
     e.preventDefault();
 
-    axios.post(`/api/edit/${dishId}`, details).catch((err) => {
-      console.log(err);
-    });
+    await axios
+      .post(`/api/edit/${dishId}`, details)
+      .then((res) => {
+        return res;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     navigate("/");
     props.refresh();

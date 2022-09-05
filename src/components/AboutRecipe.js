@@ -23,10 +23,13 @@ export default function AboutRecipe(props) {
     navigate(`/edit/${dishId}`, { state: location.state });
   };
 
-  const handleDelete = () => {
+  const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this recipe?")) {
-      axios
+      await axios
         .delete(`/api/deletedocument/${dishId}`)
+        .then((res) => {
+          return res;
+        })
         .catch((err) => console.log(err));
       navigate("/");
       props.refresh();
