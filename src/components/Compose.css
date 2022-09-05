@@ -1,0 +1,54 @@
+.compose-container {
+  width: 100%;
+  background-color: #f3f6ff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1em 0;
+  background-color: #ffff;
+}
+
+label {
+  font-weight: 700;
+  padding: 1em 0;
+}
+
+input,
+label,
+textarea {
+  width: 90%;
+}
+
+input,
+textarea {
+  border: 1px solid #1c3e9e;
+  border-radius: 5px;
+  padding: 1em 0.5em;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1.5px solid #1c3e9e;
+}
+
+.submit-button {
+  background-color: #1c3e9e;
+  color: #ffff;
+  width: 150px;
+  height: 30px;
+  border: 0;
+  border-radius: 20px;
+  margin-top: 1em;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  opacity: 0.8;
+  cursor: pointer;
+}

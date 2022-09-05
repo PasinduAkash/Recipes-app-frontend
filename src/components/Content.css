@@ -1,0 +1,23 @@
+.content-container {
+  background-color: #f3f6ff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "box box";
+  gap: 1em;
+  padding: 1em 2em;
+  position: absolute;
+}
+
+@media (min-width: 675px) and (max-width: 1000px) {
+  .content-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "box box box";
+  }
+}
+
+@media (min-width: 1000px) {
+  .content-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "box box box box";
+  }
+}

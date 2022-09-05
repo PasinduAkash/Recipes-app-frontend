@@ -1,0 +1,48 @@
+nav,
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f3f6ff;
+  padding: 0.5em 2em;
+  z-index: 1;
+}
+
+.site-title,
+.social-icons,
+.add-button {
+  margin: 0;
+}
+
+.site-title {
+  color: #1c3e9e;
+  font-size: 1.25rem;
+  width: auto;
+}
+
+.social-icons {
+  list-style: none;
+  gap: 10px;
+  width: auto;
+}
+
+.media-icon {
+  cursor: pointer;
+}
+
+.add-button {
+  height: 40px;
+  padding: 0 1.5em;
+  border-radius: 25px;
+  background-color: #1c3e9e;
+  color: #ffff;
+  text-align: center;
+  border: 0;
+}
