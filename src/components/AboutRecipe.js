@@ -36,19 +36,23 @@ export default function AboutRecipe(props) {
   return (
     <div className="recipe-container">
       <h1 className="recipe-name-title">{dishName}</h1>
-      <img className="recipe-about-image" src={dishImageURL} alt="dish"></img>
+      <div className="image-box">
+        <img className="recipe-about-image" src={dishImageURL} alt="dish"></img>
+      </div>
       <h2 className="recipe-description-title">Description</h2>
       <p className="recipe-para">{dishDescription}</p>
       <h2 className="recipe-ingredients">Ingredients</h2>
       <p className="recipe-para">{dishIngredients}</p>
       <h2 className="recipe-preparation-title">Preparation</h2>
       <p className="recipe-para">{dishPreparation}</p>
-      <IconButton onClick={handleEdit} aria-label="edit" size="small">
-        <EditIcon fontSize="inherit" />
-      </IconButton>
-      <IconButton onClick={handleDelete} aria-label="delete" size="small">
-        <DeleteIcon fontSize="inherit" />
-      </IconButton>
+      <div className="button-box">
+        <IconButton onClick={handleEdit} aria-label="edit" size="small">
+          <EditIcon fontSize="inherit" />
+        </IconButton>
+        <IconButton onClick={handleDelete} aria-label="delete" size="small">
+          <DeleteIcon fontSize="inherit" />
+        </IconButton>
+      </div>
     </div>
   );
 }
